@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { DocumentTextIcon, PhotoIcon } from "@heroicons/react/24/solid";
-import AgentSelector from "./agentSelector";
-import CancelPill from "./cancelPill";
+import AgentSelector from "@/app/components/agentSelector";
+import CancelPill from "@/app/components/cancelPill";
 import { getLayersForSelection } from "@/lib/getLayersForSelection";
 import { getImageForSelection } from "@/lib/getImageForSelection";
 import Markdown from 'markdown-to-jsx';
@@ -12,7 +12,7 @@ import {
   BlockquoteWrapper,
   MathWrapper,
   formatMessageContent
-} from './messageWrappers';
+} from '@/app/components/messageWrappers';
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Header from "./components/header";
-import Chat from "./components/chat";
+import Header from "@/app/components/header";
+import Chat from "@/app/chat/chat";
 import Tools from "./components/tools";
 import 'katex/dist/katex.min.css';
 
