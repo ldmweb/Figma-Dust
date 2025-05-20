@@ -19,8 +19,9 @@ You can then open up the Figma desktop app and import a plugin from the manifest
 
 ## Deploy the Plugin
 
-1. Push your code to the Pennylane repo on GitHub.
-2. Once your app is deployed you can update the `siteURL` section of your `package.json` file to point to the deployed URL.
+1. Push the code to the Pennylane repo on GitHub.
+2. While deploying make sure to set the environment variable `DUST_API_KEY` and `DUST_WORKSPACE_ID` to the Dust API and Workspace key.
+3. Once the app is deployed, update the `siteURL` section in the `package.json` file to point to the deployed URL.
 
 ```json
 "config": {
@@ -38,8 +39,8 @@ You can then open up the Figma desktop app and import a plugin from the manifest
   }
 ```
 
-4. Run `npm run build` to create the production build of your plugin that points to your deployed URL.
-5. Test your plugin locally and make sure that it works after pointing to vercel.
+4. Run `npm run build` to create the production build of the plugin that points to your deployed URL.
+5. Test the plugin locally and make sure that it works after pointing to the app.
 6. [Publish your plugin privately to the organization](https://help.figma.com/hc/en-us/articles/4404228629655-Create-private-organization-plugins)
 7. After publishing to the organization your plugin will update automatically when you push to the Pennylane repo.
 
