@@ -1,12 +1,14 @@
 {
   "name": "Dust",
-  "id": "dust",
+  "id": "1506659032830315519",
   "api": "1.0.0",
   "main": "dist/code.js",
   "enableProposedApi": false,
   "editorType": ["figma", "figjam"],
+  "documentAccess": "dynamic-page",
   "networkAccess": {
-    "allowedDomains": ["https://eu.dust.tt", "http://localhost:3000"],
+    "allowedDomains": ["https://eu.dust.tt", "https://test-ai-plugin-template.vercel.app/"],
+    "devAllowedDomains": ["http://localhost:3000"],
     "reasoning": "Dust access for AI agents interactions."
   }
 }

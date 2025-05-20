@@ -36,10 +36,16 @@ export async function POST(request: Request) {
     }
 
     // The result should contain the URL of the uploaded image
-    return Response.json({
+    return new Response(
+      JSON.stringify({
         fileId: result.value.id,
         url: result.value.downloadUrl,
-      });
+      }),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   } catch (error) {
     return new Response(
       JSON.stringify({ error: "Failed to upload image" }),

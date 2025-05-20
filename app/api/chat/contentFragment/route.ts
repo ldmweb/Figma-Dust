@@ -47,11 +47,14 @@ export async function POST(request: Request) {
       return new Response(`Error: ${result.error.message}`, { status: 500 });
     }
 
-    return Response.json(result.value);
+    return new Response(JSON.stringify(result.value), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
-    return Response.json(
-      { error: "Failed to post content fragment" },
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ error: "Failed to post content fragment" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }

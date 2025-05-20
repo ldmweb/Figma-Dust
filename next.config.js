@@ -9,6 +9,9 @@ const nextConfig = {
   },
   reactStrictMode: true,
   transpilePackages: ["geist"],
+  images: {
+    domains: ['dust.tt', 'storage.googleapis.com'],
+  },
 };
 
 export default nextConfig;

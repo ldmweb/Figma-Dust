@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
+import Image from "next/image";
 import { DocumentTextIcon, PhotoIcon } from "@heroicons/react/24/solid";
 import AgentSelector from "@/app/components/agentSelector";
 import CancelPill from "@/app/components/cancelPill";
@@ -428,9 +429,11 @@ export default function Chat({ agents, selectedAgent, setSelectedAgent, onChatTa
                       )}
                     </div>
                   ) : (
-                    <img
+                    <Image
                       src={message.agent.pictureUrl}
                       alt={message.agent.name}
+                      width={24}
+                      height={24}
                       className="w-6 h-6 rounded-lg"
                     />
                   )}

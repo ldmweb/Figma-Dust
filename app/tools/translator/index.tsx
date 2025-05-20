@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { getLayersForSelection } from "@/lib/getLayersForSelection";
 import { cancelTranslation, translateLayers } from "./logic";
 import { figmaAPI } from "@/lib/figmaAPI";
@@ -229,9 +230,11 @@ const handleCancel = async () => {
                           )}
                         </div>
                       ) : (
-                        <img
+                        <Image
                           src={agents.find((agent: { sId: any; }) => agent.sId === selectedAgent)?.pictureUrl || ""}
                           alt="Agent"
+                          width={24}
+                          height={24}
                           className="w-8 h-8 rounded-xl"
                         />
                       )}
@@ -291,9 +294,11 @@ const handleCancel = async () => {
                               )}
                             </div>
                           ) : (
-                            <img
+                            <Image
                               src={agent.pictureUrl}
                               alt="Agent"
+                              width={24}
+                              height={24}
                               className="w-8 h-8 rounded-full"
                             />
                           )}

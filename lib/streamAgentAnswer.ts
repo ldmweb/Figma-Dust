@@ -85,7 +85,11 @@ export async function streamAgentAnswer({
       console.log("-------------------- Streamed answer ----------------------");
       console.log(JSON.stringify(answer));
       console.log("-------------------- Agent message content ---------------------");
-      console.log(JSON.stringify(agentMsg?.content));
+      if (agentMsg && "content" in agentMsg) {
+        console.log(JSON.stringify(agentMsg.content));
+      } else {
+        console.log("No content property in agentMsg:", agentMsg);
+      }
     }
   })().catch(async (error) => {
     if (timeoutId) clearTimeout(timeoutId);

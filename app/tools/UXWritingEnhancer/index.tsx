@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { getLayersForSelection } from "@/lib/getLayersForSelection";
 import { figmaAPI } from "@/lib/figmaAPI";
 import { enhanceLayers, cancelEnhancement } from "./logic";
@@ -165,9 +166,11 @@ export default function UXWriter({ agents, selectedAgent, setSelectedAgent }: an
                           )}
                         </div>
                       ) : (
-                        <img
+                        <Image
                           src={agents.find((agent: { sId: any; }) => agent.sId === selectedAgent)?.pictureUrl || ""}
                           alt="Agent"
+                          width={24}
+                          height={24}
                           className="w-8 h-8 rounded-xl"
                         />
                       )}
@@ -227,9 +230,11 @@ export default function UXWriter({ agents, selectedAgent, setSelectedAgent }: an
                               )}
                             </div>
                           ) : (
-                            <img
+                            <Image
                               src={agent.pictureUrl}
                               alt="Agent"
+                              width={24}
+                              height={24}
                               className="w-8 h-8 rounded-full"
                             />
                           )}

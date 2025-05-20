@@ -1,5 +1,6 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 interface Agent {
   sId: string;
@@ -63,9 +64,11 @@ export default function AgentSelector({ agents, selectedAgent, setSelectedAgent,
               )}
             </div>
           ) : (
-            <img
+            <Image
               src={selectedAgentData?.pictureUrl || ""}
               alt="Agent"
+              width={24}
+              height={24}
               className="w-8 h-8 rounded-xl"
             />
           )}
@@ -116,9 +119,11 @@ export default function AgentSelector({ agents, selectedAgent, setSelectedAgent,
                     )}
                     </div>
                 ) : (
-                    <img
+                    <Image
                     src={agent.pictureUrl}
                     alt="Agent"
+                    width={24}
+                    height={24}
                     className="w-8 h-8 rounded-full"
                     />
                 )}
