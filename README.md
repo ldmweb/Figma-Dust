@@ -17,6 +17,22 @@ You can then open up the Figma desktop app and import a plugin from the manifest
 
 ![Image showing how to import from manifest](https://static.figma.com/uploads/dcfb742580ad1c70338f1f9670f70dfd1fd42596)
 
+## Deploy the Plugin
+
+1. Push your code to the Pennylane repo on GitHub.
+2. Once your app is deployed you can update the `siteURL` section of your `package.json` file to point to the deployed URL.
+
+```json
+"config": {
+  "siteURL": "https://jeancaisse.figma-plugin.app/"
+}
+```
+
+1. Run `npm run build` to create the production build of your plugin that points to your deployed URL.
+2. Test your plugin locally and make sure that it works after pointing to vercel.
+3. [Publish your plugin privately to the organization](https://help.figma.com/hc/en-us/articles/4404228629655-Create-private-organization-plugins)
+4. After publishing to the organization your plugin will update automatically when you push to the Pennylane repo.
+
 ## figmaAPI
 
 This template includes a `figmaAPI` helper at `@/lib/figmaAPI` that lets you run plugin code from inside of the iframe. This is
