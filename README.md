@@ -28,10 +28,20 @@ You can then open up the Figma desktop app and import a plugin from the manifest
 }
 ```
 
-1. Run `npm run build` to create the production build of your plugin that points to your deployed URL.
-2. Test your plugin locally and make sure that it works after pointing to vercel.
-3. [Publish your plugin privately to the organization](https://help.figma.com/hc/en-us/articles/4404228629655-Create-private-organization-plugins)
-4. After publishing to the organization your plugin will update automatically when you push to the Pennylane repo.
+3. Update the manifest.json file to add the deployed URL to the allowed domains
+
+```json
+"networkAccess": {
+    "allowedDomains": ["https://eu.dust.tt", "https://test-ai-plugin-template.vercel.app/"],
+    "devAllowedDomains": ["http://localhost:3000"],
+    "reasoning": "Dust access for AI agents interactions."
+  }
+```
+
+4. Run `npm run build` to create the production build of your plugin that points to your deployed URL.
+5. Test your plugin locally and make sure that it works after pointing to vercel.
+6. [Publish your plugin privately to the organization](https://help.figma.com/hc/en-us/articles/4404228629655-Create-private-organization-plugins)
+7. After publishing to the organization your plugin will update automatically when you push to the Pennylane repo.
 
 ## figmaAPI
 
