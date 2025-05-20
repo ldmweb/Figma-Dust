@@ -28,13 +28,13 @@ You can then open up the Figma desktop app and import a plugin from the manifest
 }
 ```
 
-3. Update the manifest.json file to add the deployed URL to the allowed domains
+3. Update the `manifest.json` file to add the deployed URL to the allowed domains
 
 ```json
 "networkAccess": {
-    "allowedDomains": ["https://eu.dust.tt", "https://test-ai-plugin-template.vercel.app/"],
+    "allowedDomains": ["https://eu.dust.tt", "https://jeancaisse.figma-plugin.app/"],
     "devAllowedDomains": ["http://localhost:3000"],
-    "reasoning": "Dust access for AI agents interactions."
+    "reasoning": "Dust access for AI agents interactions and deployed app access"
   }
 ```
 
