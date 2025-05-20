@@ -129,7 +129,6 @@ const handleCancel = async () => {
         setLoading(false);
         setChainOfThought("");
         setShowSuccess(true);
-        console.log(showSuccess)
         setTimeout(() => setShowSuccess(false), 2000);
       },
       (err) => {

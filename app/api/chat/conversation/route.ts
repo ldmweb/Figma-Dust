@@ -64,7 +64,7 @@ export async function POST(req: Request) {
       conversationId: conversation.sId,
     });
 
-    console.log("readableStream:", readableStream);
+    // console.log("readableStream:", readableStream);
 
     return new Response(readableStream, {
       headers: {

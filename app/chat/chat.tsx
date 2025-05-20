@@ -203,7 +203,6 @@ export default function Chat({ agents, selectedAgent, setSelectedAgent, onChatTa
     const controller = new AbortController();
     setAbortController(controller);
 
-    // Capture current attachments before resetting
     const layersToSend = attachedLayers ? [...attachedLayers] : null;
     const imageToSend = attachedImage ? attachedImage : null;
 
