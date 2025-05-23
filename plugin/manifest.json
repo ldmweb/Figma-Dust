@@ -5,7 +5,6 @@
   "main": "dist/code.js",
   "enableProposedApi": false,
   "editorType": ["figma", "figjam"],
-  "documentAccess": "dynamic-page",
   "networkAccess": {
     "allowedDomains": ["https://eu.dust.tt", "https://test-ai-plugin-template.vercel.app/"],
     "devAllowedDomains": ["http://localhost:3000"],
